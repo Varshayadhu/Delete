@@ -513,9 +513,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if CUSTOM_FILE_CAPTION:
             try:
                 f_caption=CUSTOM_FILE_CAPTION.format(file_name=title, file_size=size, file_caption=f_caption)
-                buttons = [[
-                   InlineKeyboardButton(text=f"{query.message.chat.title}", url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                  ]]
             except Exception as e:
                 logger.exception(e)
             f_caption = f_caption
@@ -536,7 +533,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f'<spoiler><b>{query.from_user.mention}</b></spoiler>\n\n'           
                 f'<b>Fɪʟᴇ Nᴀᴍᴇ</b>\n<code>[KR.OTT] {title}</code>\n\n'              
                 f'<b>Sɪᴢᴇ</b> : <b>{size}</b>\n\n'
-                f'<b>Error?<a href=https://t.me/+JZerz8zdsSc2YzU1>CLICK HERE TO JOIN & TRY AGAIN!</a></b>',
+                f'<b>Error?<a href=https://t.me/+z8G1MwxbA75kZjhl>CLICK HERE TO JOIN & TRY AGAIN!</a></b>',
                 True,
                 'html',
                 reply_markup=InlineKeyboardMarkup(
