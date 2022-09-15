@@ -113,22 +113,22 @@ async def fil_mod(client, message):
       mode_on = ["yes", "on", "true"]
       mode_of = ["no", "off", "false"]
 
-      try:
-         args = message.text.split(None, 1)[1].lower()
-      except:
-         return await message.reply("Vro command is incomplete🥲.")
-
-      m = await message.reply("🚀Processing...")
+      try: 
+         args = message.text.split(None, 1)[1].lower() 
+      except: 
+         return await message.reply("**𝙸𝙽𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳...**")
+      
+      m = await message.reply("**𝚂𝙴𝚃𝚃𝙸𝙽𝙶.../**")
 
       if args in mode_on:
-          FILTER_MODE[str(message.chat.id)] = "True"
-          await m.edit("Auto filter enabled for this chat🎉")
-
+          FILTER_MODE[str(message.chat.id)] = "True" 
+          await m.edit("**𝙰𝚄𝚃𝙾𝙵𝙸𝙻𝚃𝙴𝚁 𝙴𝙽𝙰𝙱𝙻𝙴𝙳**")
+      
       elif args in mode_of:
           FILTER_MODE[str(message.chat.id)] = "False"
-          await m.edit("Auto filter disabled for this chat😴")
+          await m.edit("**𝙰𝚄𝚃𝙾𝙵𝙸𝙻𝚃𝙴𝚁 𝙳𝙸𝚂𝙰𝙱𝙻𝙴𝙳**")
       else:
-          await m.edit("Use: `/autofilter on` or `/autofilter off🥀`")
+          await m.edit("𝚄𝚂𝙴 :- /autofilter on 𝙾𝚁 /autofilter off")
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
@@ -2014,6 +2014,7 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
     if imdb:
         cap = TEMPLATE.format(
             query=search,
+            requested = message.from_user.mention,
             mention_bot=temp.MENTION,
             mention_user=message.from_user.mention if message.from_user else message.sender_chat.title,
             title=imdb['title'],
