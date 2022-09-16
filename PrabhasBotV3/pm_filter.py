@@ -535,7 +535,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
             else:
                msg = await client.send_cached_media(
-                    chat_id=AUTH_CHANNEL,
+                    chat_id=CHANNEL_ID,
                     file_id=file_id,
                     caption=f'<b>{title}</b>\n\n<code>{size}</code>\n\n<code>=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</code>\n\n<b>{greeting} <spoiler>{query.from_user.mention}</spoiler>✨</b>\n\n<i>Because of copyright this file will be deleted from here within 10 minutesso forward it to anywhere before downloading!</i>\n\n<b><b>🔰 Powered By:<spoiler></b>{query.message.chat.title}</b></spoiler>',
                     protect_content=True if ident == "filep" else False
@@ -544,7 +544,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f'<spoiler><b>{query.from_user.mention}</b></spoiler>\n\n'           
                 f'<b>Fɪʟᴇ Nᴀᴍᴇ</b>\n<code>[KR.OTT] {title}</code>\n\n'              
                 f'<b>Sɪᴢᴇ</b> : <b>{size}</b>\n\n'
-                f'<b>Error? ("CLICK HERE TO JOIN & TRY AGAIN!", url = f"{AUTH_CHANNEL}")',
+                f'<b>Error? ("CLICK HERE TO JOIN & TRY AGAIN!", url = f"{CHANNEL_LINK}")',
                 True,
                 'html',
                 disable_web_page_preview=True,
