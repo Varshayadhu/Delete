@@ -544,7 +544,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f'<spoiler><b>{query.from_user.mention}</b></spoiler>\n\n'           
                 f'<b>Fɪʟᴇ Nᴀᴍᴇ</b>\n<code>[KR.OTT] {title}</code>\n\n'              
                 f'<b>Sɪᴢᴇ</b> : <b>{size}</b>\n\n'
-                f'<b>Error? ("CLICK HERE TO JOIN & TRY AGAIN!", url = f"{CHANNEL_LINK}")',
+                f'<b>Error?<a href=https://t.me/+JZerz8zdsSc2YzU1>CLICK HERE TO JOIN & TRY AGAIN!</a></b>',
                 True,
                 'html',
                 disable_web_page_preview=True,
