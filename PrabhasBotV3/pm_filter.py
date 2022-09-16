@@ -535,7 +535,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
             else:
                msg = await client.send_cached_media(
-                    chat_id=CHANNEL_ID,
+                    chat_id=AUTH_CHANNEL,
                     file_id=file_id,
                     caption=f'<b>{title}</b>\n\n<code>{size}</code>\n\n<code>=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</code>\n\n<b>{greeting} <spoiler>{query.from_user.mention}</spoiler>✨</b>\n\n<i>Because of copyright this file will be deleted from here within 10 minutesso forward it to anywhere before downloading!</i>\n\n<b><b>🔰 Powered By:<spoiler></b>{query.message.chat.title}</b></spoiler>',
                     protect_content=True if ident == "filep" else False
