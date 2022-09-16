@@ -106,7 +106,7 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 CHANNEL_LINK = environ.get('CHANNEL_LINK', "")
-CHANNEL_ID = int(environ.get('CHANNEL_ID', 0))
+CHANNEL_ID = int(environ.get('CHANNEL_ID', "")
 
 DELETE_TIME = int(environ.get('DELETE_TIME', 600))
 START_IMAGE_URL = environ.get('START_IMAGE_URL', "")
