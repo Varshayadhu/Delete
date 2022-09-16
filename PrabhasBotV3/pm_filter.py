@@ -533,7 +533,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             elif settings['botpm']:
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
-        else:
+        try:
             msg = await client.send_cached_media(
                     chat_id=AUTH_CHANNEL,
                     file_id=file_id,
