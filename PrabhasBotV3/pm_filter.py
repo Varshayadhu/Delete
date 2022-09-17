@@ -842,6 +842,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "nihu":
         buttons = [[
         InlineKeyboardButton('✨ ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ✨', callback_data='start')
+   ],[
         InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
    ],[
         InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='me'),      
