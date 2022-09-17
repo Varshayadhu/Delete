@@ -9,7 +9,7 @@ import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, DELETE_TIME, P_TTI_SHOW_OFF, IMDB, REDIRECT_TO, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, START_IMAGE_URL, UNAUTHORIZED_CALLBACK_TEXT, redirected_env
+    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, START_IMAGE_URL, UNAUTHORIZED_CALLBACK_TEXT, CHANNEL_ID, CHANNEL_LINK, redirected_env
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -535,7 +535,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
             else:
                msg = await client.send_cached_media(
-                    chat_id=AUTH_CHANNEL,
+                    chat_id=CHANNEL_ID,
                     file_id=file_id,
                     caption=f'<b>{title}</b>\n\n<code>{size}</code>\n\n<code>=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=</code>\n\n<b>{greeting} <spoiler>{query.from_user.mention}</spoiler>✨</b>\n\n<i>Because of copyright this file will be deleted from here within 10 minutesso forward it to anywhere before downloading!</i>\n\n<b><b>🔰 Powered By:<spoiler></b>{query.message.chat.title}</b></spoiler>',
                     protect_content=True if ident == "filep" else False
@@ -544,7 +544,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f'<spoiler><b>{query.from_user.mention}</b></spoiler>\n\n'           
                 f'<b>Fɪʟᴇ Nᴀᴍᴇ</b>\n<code>[KR.OTT] {title}</code>\n\n'              
                 f'<b>Sɪᴢᴇ</b> : <b>{size}</b>\n\n'
-                f'<b>Error?<a href=https://t.me/+JZerz8zdsSc2YzU1>CLICK HERE TO JOIN & TRY AGAIN!</a></b>',
+                f'<b>Error? ("CLICK HERE TO JOIN & TRY AGAIN!", url = f"{CHANNEL_LINK}")',
                 True,
                 'html',
                 disable_web_page_preview=True,
