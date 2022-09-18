@@ -107,7 +107,7 @@ And More
 
 ## Bot
 
-[𝐏𝐫𝐚𝐛𝐡𝐚𝐬](https://telegram.dog/Prabhas_autofilterBOT)
+[𝐏𝐫𝐚𝐛𝐡𝐚𝐬](https://telegram.dog/Prabhas_AutoFilter_BoT)
 
 #### Thanks
 
