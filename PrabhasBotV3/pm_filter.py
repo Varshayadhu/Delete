@@ -2028,7 +2028,7 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
     if imdb:
         cap = TEMPLATE.format(
             query=search,
-            requested = message.from_user.mention,
+            requested=message.from_user.mention,
             mention_bot=temp.MENTION,
             mention_user=message.from_user.mention if message.from_user else message.sender_chat.title,
             title=imdb['title'],
