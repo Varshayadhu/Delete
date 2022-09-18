@@ -852,7 +852,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            text=script.START_TXT.format(from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html',
         )
@@ -867,7 +867,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            text=script.START_TXT.format(from_user.mention, temp.U_NAME, temp.B_NAME),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
