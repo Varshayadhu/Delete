@@ -207,7 +207,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}#{query.from_user.id}'
+                    text=f"{get_size(file.file_size)} {file.file_name}", callback_data=f'{pre}#{file.file_id}#{query.from_user.id}'
                 )
             ] 
             for file in files
@@ -839,23 +839,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await removebg_sticker(client, query.message)
     elif query.data == "pages":
         await query.answer()
-    elif query.data == "nihu":
-        buttons = [[
-        InlineKeyboardButton('✨ ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ✨', callback_data='start')
-   ],[
-        InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-   ],[
-        InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='me'),      
-        InlineKeyboardButton('⚙️ ʜᴇʟᴘ', callback_data='help')
-   ],[
-        InlineKeyboardButton('🔰 ɢᴏ ʙᴀᴄᴋ ᴛᴏ ᴍᴀɪɴ ᴍᴇɴᴜ 🔰', callback_data='nihu')   
-    ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode='html',
-        )
     elif query.data == "start":
         buttons = [[
         InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -868,10 +851,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
-            disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
-        )
+            parse_mode='html',
 
     elif query.data == "photo":
         buttons = [[
@@ -1943,7 +1924,7 @@ Try to do the following...
     elif query.data == "close":
         await query.message.delete()
     elif query.data == 'tips':
-        await query.answer("sᴇɴᴅ ᴄᴏʀʀᴇᴄᴛ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ɴᴀᴍᴇ ғᴏʀ ʙᴇᴛᴛᴇʀ ʀᴇsᴜʟᴛs .\nᴛᴏ ɢᴇᴛ ʙᴇᴛᴛᴇʀ ʀᴇsᴜʟᴛ ғᴏʀ sᴇʀɪᴇs sᴇᴀʀᴄʜ ʟɪᴋᴇ ᴇxᴀᴍᴘʟᴇ ɢɪᴠᴇɴ, Eg - Peaky Blinders S01E01\n\n © 𝖥𝖨𝖫𝖤𝖲𝖤𝖠𝖱𝖢𝖧𝗑𝖡𝖮𝖳", True)
+        await query.answer("sᴇɴᴅ ᴄᴏʀʀᴇᴄᴛ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ɴᴀᴍᴇ ғᴏʀ ʙᴇᴛᴛᴇʀ ʀᴇsᴜʟᴛs .\nᴛᴏ ɢᴇᴛ ʙᴇᴛᴛᴇʀ ʀᴇsᴜʟᴛ ғᴏʀ sᴇʀɪᴇs sᴇᴀʀᴄʜ ʟɪᴋᴇ ᴇxᴀᴍᴘʟᴇ ɢɪᴠᴇɴ, Eg - Peaky Blinders S01E01\n\n © PRABHAS", True)
     try: await query.answer('Your Results are there in Filter Button') 
     except: pass
 
@@ -1977,7 +1958,7 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                        text=f"[{get_size(file.file_size)}] {file.file_name}", 
+                        text=f"{get_size(file.file_size)} {file.file_name}", 
                         callback_data=f'{pre}#{file.file_id}#{msg.from_user.id if msg.from_user is not None else 0}'
                 )
             ] 
