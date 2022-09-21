@@ -73,7 +73,7 @@ async def save_group(bot, message):
                         pass
                 temp.MELCOW['welcome'] = await message.reply_video(
                 video="https://telegra.ph/file/922ba803c3e701590dc97.mp4",
-                caption=f"<b>💖 𝙷𝚎𝚢 {greeting} {u.mention}✨</b><b> 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 </b><b>{message.chat.title} 💖</b>\n\n🔘 No Promo, No Porn, No Other Abuses\n🔘 Ask Your Movies With Correct Spelling\n🔘 Spammers Stay Away\n🔘 Feel Free To Report Any Errors To Admins using @admin\n\n<b>✨ 𝙷𝙰𝚅𝙴 𝙰 𝙽𝙸𝙲𝙴 𝙳𝙰𝚈 𝙱𝚁𝙾𝚃𝙷𝙴𝚁 & 𝚂𝙸𝚂𝚃𝙴𝚁 ✨</b>",
+                caption=f"<b>💖 𝙷𝚎𝚢 {greeting} {u.mention}✨</b><b> 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 </b><b>{message.chat.title} 💖</b>\n\n<b>🔘 No Promo, No Porn, No Other Abuses</b>\n<b>🔘 Ask Your Movies With Correct Spelling</b>\n<b>🔘 Spammers Stay Away</b>\n<b>🔘 Feel Free To Report Any Errors To Admins using @admin</b>\n\n<b>✨ 𝙷𝙰𝚅𝙴 𝙰 𝙽𝙸𝙲𝙴 𝙳𝙰𝚈 𝙱𝚁𝙾𝚃𝙷𝙴𝚁 & 𝚂𝙸𝚂𝚃𝙴𝚁 ✨</b>",
                 reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
