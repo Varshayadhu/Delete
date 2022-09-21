@@ -50,7 +50,7 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', url=f"https://t.me/{temp.U_NAME}?start=owner"),
+            InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', url=f"https://t.me/sachin_official_admin"),
             InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url='https://t.me/Kiccharequest')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
@@ -63,7 +63,7 @@ async def save_group(bot, message):
                 buttons = [[
                 InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', url=f"https://t.me/{temp.U_NAME}?start=owner"),
+                InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', url=f"https://t.me/sachin_official_admin"),
                 InlineKeyboardButton('⚙️ ʜᴇʟᴘ', callback_data='help')
             ]]
                 if (temp.MELCOW).get('welcome') is not None:
@@ -73,7 +73,7 @@ async def save_group(bot, message):
                         pass
                 temp.MELCOW['welcome'] = await message.reply_video(
                 video="https://telegra.ph/file/922ba803c3e701590dc97.mp4",
-                caption=f"<b>💖 𝙷𝚎𝚢 {greeting} {u.mention}✨</b><b> 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 </b><b>{message.chat.title} 💖</b>\n\n<b>✨ 𝙷𝙰𝚅𝙴 𝙰 𝙽𝙸𝙲𝙴 𝙳𝙰𝚈 𝙱𝚁𝙾𝚃𝙷𝙴𝚁 & 𝚂𝙸𝚂𝚃𝙴𝚁 ✨</b>",
+                caption=f"<b>💖 𝙷𝚎𝚢 {greeting} {u.mention}✨</b><b> 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 </b><b>{message.chat.title} 💖</b>\n\n🔘 No Promo, No Porn, No Other Abuses\n🔘 Ask Your Movies With Correct Spelling\n🔘 Spammers Stay Away\n🔘 Feel Free To Report Any Errors To Admins using @admin\n\n<b>✨ 𝙷𝙰𝚅𝙴 𝙰 𝙽𝙸𝙲𝙴 𝙳𝙰𝚈 𝙱𝚁𝙾𝚃𝙷𝙴𝚁 & 𝚂𝙸𝚂𝚃𝙴𝚁 ✨</b>",
                 reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
