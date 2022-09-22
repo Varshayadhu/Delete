@@ -61,12 +61,26 @@ async def start(client, message):
 ᴍʏ ɴᴀᴍᴇ ɪꜱ  {temp.B_NAME}  ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ʏᴏᴜ ᴍᴏᴠɪᴇꜱ ᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ꜱᴇᴇ ᴍʏ ᴘᴏᴡᴇʀ 😈</b>
 """
         buttons = [[
-            InlineKeyboardButton('✨ ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ✨', callback_data='start')
-        ]]         
-        reply_markup = InlineKeyboardMarkup(buttons)        
+            InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝗆𝖾 𝗍𝗈 𝗒𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url='http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('ʜᴇʟᴘ 💭', callback_data='help'),
+            InlineKeyboardButton("🧣ᴀʙᴏᴜᴛ", callback_data="about")
+            ],[
+            InlineKeyboardButton('🔍sᴇᴀʀᴄʜ', switch_inline_query_current_chat='')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("typing")
+        m=await message.reply_text("◈◇◇")
+        await asyncio.sleep(2)
+        n=await m.edit("◈◈◇")
+        await asyncio.sleep(2)
+        o=await n.edit("◈◈◈")
+        await asyncio.sleep(2)
+        await o.delete()
+        await message.reply_chat_action("typing")
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=START_TXT,
+            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
         )
@@ -114,12 +128,26 @@ async def start(client, message):
 ᴍʏ ɴᴀᴍᴇ ɪꜱ {temp.B_NAME} ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ʏᴏᴜ ᴍᴏᴠɪᴇꜱ ᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ꜱᴇᴇ ᴍʏ ᴘᴏᴡᴇʀ 😈</b>
 """
         buttons = [[
-            InlineKeyboardButton('✨ ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ✨', callback_data='start')
-        ]]         
-        reply_markup = InlineKeyboardMarkup(buttons)        
+            InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝗆𝖾 𝗍𝗈 𝗒𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url='http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('ʜᴇʟᴘ 💭', callback_data='help'),
+            InlineKeyboardButton("🧣ᴀʙᴏᴜᴛ", callback_data="about")
+            ],[
+            InlineKeyboardButton('🔍sᴇᴀʀᴄʜ', switch_inline_query_current_chat='')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("typing")
+        m=await message.reply_text("◈◇◇")
+        await asyncio.sleep(2)
+        n=await m.edit("◈◈◇")
+        await asyncio.sleep(2)
+        o=await n.edit("◈◈◈")
+        await asyncio.sleep(2)
+        await o.delete()
+        await message.reply_chat_action("typing")
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=START_TXT,
+            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
         )
