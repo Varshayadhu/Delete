@@ -1146,6 +1146,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?text=')
         ],[
             InlineKeyboardButton("🇮🇳 ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴏ ᴍᴀʟᴀʏᴀʟᴀᴍ 🇮🇳", callback_data="try")
+        ],[
+            InlineKeyboardButton("🇮🇳 ᴛʀᴀɴꜱʟᴀᴛᴇ ᴛᴏ ᴋᴀɴɴᴀᴅᴀ 🇮🇳", callback_data="try")
+        ],[
+            InlineKeyboardButton("🇺🇸 ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴏ ᴇɴɢʟɪꜱʜ 🇺🇸", callback_data="mmmm")
+        ]] 
+        await query.message.edit_text(script.KANNADASPELL_TXT, reply_markup=InlineKeyboardMarkup(btn))
+    elif query.data == "mmmm":
+        btn = [[
+            InlineKeyboardButton('🔍 ɢᴏᴏɢʟᴇ 🔎', url=f'https://google.com/search?q='),
+            InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?text=')
+        ],[
+            InlineKeyboardButton("🇮🇳 ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴏ ᴍᴀʟᴀʏᴀʟᴀᴍ 🇮🇳", callback_data="try")
+        ],[
+            InlineKeyboardButton("🇮🇳 ᴛʀᴀɴꜱʟᴀᴛᴇ ᴛᴏ ᴋᴀɴɴᴀᴅᴀ 🇮🇳", callback_data="try")
+        ],[
+            InlineKeyboardButton("🇺🇸 ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴏ ᴇɴɢʟɪꜱʜ 🇺🇸", callback_data="mmmm")
         ]] 
         await query.message.edit_text(script.ENGLISHSPELL_TXT, reply_markup=InlineKeyboardMarkup(btn))
         
@@ -2074,6 +2090,8 @@ async def advantage_spell_chok(msg):
             InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?text=')
         ],[
             InlineKeyboardButton("🇮🇳 ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴏ ᴍᴀʟᴀʏᴀʟᴀᴍ 🇮🇳", callback_data="try")
+        ],[
+            InlineKeyboardButton("🇮🇳 ᴛʀᴀɴꜱʟᴀᴛᴇ ᴛᴏ ᴋᴀɴɴᴀᴅᴀ 🇮🇳", callback_data="try")
         ]]        
         k=await msg.reply_photo(photo="https://telegra.ph/file/4bb1968bd091453b0070c.jpg", caption=script.ENGLISHSPELL_TXT, reply_markup=InlineKeyboardMarkup(btn))    
         await asyncio.sleep(40)
@@ -2111,6 +2129,8 @@ async def advantage_spell_chok(msg):
             InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?text=')
         ],[
             InlineKeyboardButton("🇮🇳 ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴏ ᴍᴀʟᴀʏᴀʟᴀᴍ 🇮🇳", callback_data="try")
+        ],[
+            InlineKeyboardButton("🇮🇳 ᴛʀᴀɴꜱʟᴀᴛᴇ ᴛᴏ ᴋᴀɴɴᴀᴅᴀ 🇮🇳", callback_data="try")
         ]]           
         k=await msg.reply_photo(photo="https://telegra.ph/file/4bb1968bd091453b0070c.jpg", caption=script.ENGLISHSPELL_TXT, reply_markup=InlineKeyboardMarkup(btn))    
         await asyncio.sleep(40)
@@ -2124,6 +2144,8 @@ async def advantage_spell_chok(msg):
         InlineKeyboardButton(' 🔍 ʏᴀɴᴅᴇx 🔎', url=f'https://yandex.com/search?text=')
     ],[
         InlineKeyboardButton("🇮🇳 ᴛʀᴀɴsʟᴀᴛᴇ ᴛᴏ ᴍᴀʟᴀʏᴀʟᴀᴍ 🇮🇳", callback_data="try")
+    ],[
+            InlineKeyboardButton("🇮🇳 ᴛʀᴀɴꜱʟᴀᴛᴇ ᴛᴏ ᴋᴀɴɴᴀᴅᴀ 🇮🇳", callback_data="try")
     ]]
     k=await msg.reply_photo(photo="https://telegra.ph/file/4bb1968bd091453b0070c.jpg", caption=script.ENGLISHSPELL_TXT, reply_markup=InlineKeyboardMarkup(btn))    
     await asyncio.sleep(40)
