@@ -94,15 +94,15 @@ async def start(client, message):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)  
         await message.reply_chat_action("typing")
-        await asyncio.sleep(0.4)
+        await asyncio.sleep(3)
         m=await message.reply_text("🎊")
-        await asyncio.sleep(0.5)
+        await asyncio.sleep(3)
         n=await m.edit("⚡")
-        await asyncio.sleep(0.3)
+        await asyncio.sleep(3)
         o=await n.edit("ꜱᴛᴀʀᴛɪɴɢ... ")
-        await asyncio.sleep(0.4)
+        await asyncio.sleep(4)
         await o.delete()
-        await message.reply_sticker("CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA")
+        await message.reply_sticker("CAACAgUAAxkBAAIGzmM_GXTFLdn6Myl3l53ED82Hmfb6AAIVAQACyJRkFGZEMKKnFWwTHgQ")
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=START_TXT,
