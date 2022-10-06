@@ -93,7 +93,7 @@ async def start(client, message):
             InlineKeyboardButton('🔍sᴇᴀʀᴄʜ', switch_inline_query_current_chat='')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)  
-        await query.message.reply_chat_action("typing")
+        await message.reply_chat_action("typing")
         time.sleep(0.4)
         lol.edit_text("🎊")
         time.sleep(0.5)
