@@ -93,16 +93,16 @@ async def start(client, message):
             InlineKeyboardButton('🔍sᴇᴀʀᴄʜ', switch_inline_query_current_chat='')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)  
-            time.sleep(0.4)
-            lol.edit_text("🎊")
-            time.sleep(0.5)
-            lol.edit_text("⚡")
-            time.sleep(0.3)
-            lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
-            time.sleep(0.4)
-            lol.delete()
-            update.effective_message.reply_sticker(
-                "CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA"
+        await query.message.reply_chat_action("typing")
+        time.sleep(0.4)
+        lol.edit_text("🎊")
+        time.sleep(0.5)
+        lol.edit_text("⚡")
+        time.sleep(0.3)
+        lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+        time.sleep(0.4)
+        lol.delete()
+        update.effective_message.reply_sticker("CAACAgUAAx0CUgguZAABARdrYwt_f9vFYZop5n-EGGa80vLar9AAAjsIAAKagolX-O0V64tvzK8pBA")
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=START_TXT,
