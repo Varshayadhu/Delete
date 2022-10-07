@@ -541,8 +541,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     protect_content=True if ident == "filep" else False
                     )
             msg1 = await query.message.reply(
-                f'<spoiler><b>{query.from_user.mention}</b></spoiler>\n\n'           
-                f'<b>Fɪʟᴇ Nᴀᴍᴇ</b>\n<code>[KR.OTT] {title}</code>\n\n'              
+                f'\n\n<b>Fɪʟᴇ Nᴀᴍᴇ</b>\n<code>[KR.OTT] {title}</code>\n\n'              
                 f'<b>Sɪᴢᴇ</b> : <b>{size}</b>\n\n'
                 f'<b>Error?<a href={CHANNEL_LINK}>CLICK HERE TO JOIN & TRY AGAIN!</a></b>',
                 True,
@@ -2003,9 +2002,9 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
     )
     btn.insert(1,
         [
+            InlineKeyboardButton(f'ғɪʟᴇs: {len(files)}', 'reqst1'),
             InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'dupe'),
-            InlineKeyboardButton(f'sᴇʀɪᴇs', 'dupe'),
-            InlineKeyboardButton(f'ᴛɪᴘs', 'tips')
+            InlineKeyboardButton(f'sᴇʀɪᴇs', 'dupe')
         ]
     )
 
